@@ -1,0 +1,19 @@
+{
+    "name": "vite-federation-react",
+    "private": true,
+    "version": "1.0.0",
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "build": "pnpm  --parallel --filter \"./**\" build",
+        "preview": "pnpm  --parallel --filter \"./**\" preview",
+        "serve": "pnpm  --parallel --filter \"./**\" dev",
+        "stop": "kill-port --port 5000,5001"
+    },
+    "devDependencies": {
+        "@originjs/vite-plugin-federation": "^1.1.10",
+        "http-server": "^14.1.1",
+        "kill-port": "^2.0.1"
+    }
+}

@@ -1,0 +1,173 @@
+:root {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.App {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+
+#sidebar,
+#rightbar {
+    padding: 10px 10px;
+    position: sticky;
+    min-width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* position: relative; */
+    transition: transform 0.3s ease-in-out;
+}
+
+#sidebar.collapsed,
+#rightbar.collapsed {
+    width: 30px;
+    min-width: 30px;
+    transform: translateX(-70%);
+}
+
+#collapse2 {
+    position: absolute;
+    width: 20px;
+    height: 50px;
+    background-color: rgb(71, 71, 71);
+    border: 1px solid black;
+    outline: none;
+    border-radius: 5px;
+    left: 0;
+    top: 50%;
+    transform: translate(-60%, -50%);
+    border: 1px solid black;
+    box-shadow: -5px 2px 4px 0px #47464620;
+}
+
+#collapse {
+    position: absolute;
+    width: 15px;
+    height: 30px;
+    background-color: rgb(216, 219, 231);
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    right: 0;
+    top: 50%;
+    transform: translate(60%, -50%);
+}
+
+.items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    list-style: none;
+    margin: 4px;
+    border-bottom: 1px solid black;
+    padding: 4px;
+}
+
+li:hover {
+    border-color: rgb(0, 51, 192);
+    color: rgb(0, 51, 192);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    padding: 10px;
+}
+
+#content {
+    flex: 1;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.device-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.device-table td,
+.device-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.device-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.device-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4caf50;
+    color: white;
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 0 20px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+.search-bar button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.search-bar button svg {
+    fill: #aaaaaa;
+    width: 20px;
+    height: 20px;
+}
+
+.search-bar button:hover svg {
+    fill: #666666;
+}
+
+.search-bar button:active svg {
+    fill: #333333;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
